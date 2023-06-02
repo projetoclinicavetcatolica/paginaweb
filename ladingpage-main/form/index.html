@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="forms.js" defer></script>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <h2>Realizar Agendamento</h2>
+        </div>
+        <script>
+          confirm("Não atendemos animais de grande porte!\n\nEspecialidade Clinica medica \nValor da consulta: R$ 50,00 \nEm caso de internação: Horário disponibilizado.\nDas 08:00 horas da manhã \nAté as 21:00 horas da noite. \nFormas de pagamento \nCartão: Débito e crédito");
+        </script>
+
+        <form method="POST" action="form.php" id="form" class="form">
+          <div class="form-control">
+            <label for="nome">Nome Completo do Tutor</label> 
+            <input
+              type="text" name="nome"
+              id="username"
+              placeholder="Digite seu nome.."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          
+          <div class="form-control">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel" name="telefone"
+              id="password"
+              placeholder="Digite seu telefone..."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email.." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="email" placeholder="Digite seu CPF.." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+            <label for="nomeAnimal">Nome do Animal</label>
+            <input
+              type="text" name="nomeAnimal"
+              id="password-confirmation"
+              placeholder="Digite o nome do seu Animal ..."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="especie">Espécie</label>
+            <input
+              type="text" name="especie"
+              id="password-confirmation"
+              placeholder="Digite a espécie do seu Animal ..."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+          <div>
+          <b> Selecione uma data para o atendimento:
+          </b>
+            
+          <br>
+            
+          <h1 style="text-align: center;">
+            <input type="datetime-local" name="data" id="Test_DatetimeLocal">
+          
+          </h1>
+          </div>
+        </br>
+          <button type="submit" onclick="confirmacao()">Confirmar</button>
+        </form>
+      </div>
+
+    
+    
+</body>
+</html>

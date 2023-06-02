@@ -1,0 +1,68 @@
+<?php 
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+           
+            <h1>Clinica  Veterinaria</h1>
+            
+
+        </div>
+        <ul>
+            <a href="https://www.catolica.edu.br/curso/medicina-veterinaria-unicatolica"><li>Início</li></a>
+            <a href="#"><li>Serviço</li></a>
+            <a href="#"><li>Sobre</li></a>
+            <a href="#"><li>Contatos</li></a>
+            <a href="#" id="inscreva-se-btn"><li>Realizar Agendamento</li></a>
+        </ul>
+    </header>
+    <main>
+        <aside>
+            
+            <h2>   <span> Inscreva-se agora </span></h2>
+            <h2>na Newslatter</h2>
+            <p>“Porque dão tudo sem pedir nada. Porque frente ao poder do homem que conta com armas,  eles são  indefensos.
+                Porque são eternas crianças, não sabem nem de ódios nem de guerras.
+                Porque não conhecem o dinheiro e se conformam só com um teto onde se refugiar do frio.
+                Porque se fazem entender sem palavras, porque seu olhar é puro como sua alma.</p>
+                
+                <?php 
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+                
+                ?>
+                 <form method="POST" action="home_.php">
+                     <input type="text" name="nome" class="nome" placeholder="Nome">
+                     <input type="email"  name="email" class="email" placeholder="E-Mail">
+                     <input type="submit" value = "Enviar">
+                    </form>
+        
+        </aside>
+
+        <article>
+            <img src="logo-catolica-vet.png" alt="Logo Católica">
+
+        </article>
+
+
+    </main>
+</body>
+</html>
